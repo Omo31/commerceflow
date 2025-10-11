@@ -20,3 +20,12 @@ runConfig:
 # See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
 # - variable: MY_SECRET
 #   secret: mySecretRef
+
+# Describes how to build your app.
+# See https://firebase.google.com/docs/app-hosting/configure
+customBuild:
+  # Command to build your app
+  command: 'npm run build'
+
+# Command to start your app
+startCommand: 'npm run start'
