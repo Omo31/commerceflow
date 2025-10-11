@@ -1,0 +1,70 @@
+{
+  "placeholderImages": [
+    {
+      "id": "product-1",
+      "description": "A modern and sleek electronic gadget.",
+      "imageUrl": "https://images.unsplash.com/photo-1717295248358-4b8f2c8989d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbGVjdHJvbmljJTIwZ2FkZ2V0fGVufDB8fHx8MTc1OTQzNjg2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electronic gadget"
+    },
+    {
+      "id": "product-2",
+      "description": "Stylish and comfortable apparel for everyday wear.",
+      "imageUrl": "https://images.unsplash.com/photo-1739773375426-880a10bea9a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYXNoaW9uJTIwYXBwYXJlbHxlbnwwfHx8fDE3NTk0MDU2OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion apparel"
+    },
+    {
+      "id": "product-3",
+      "description": "Handcrafted home decor item.",
+      "imageUrl": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxob21lJTIwZGVjb3J8ZW58MHx8fHwxNzU5NDMzMjI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "home decor"
+    },
+    {
+      "id": "product-4",
+      "description": "Organic and healthy food product.",
+      "imageUrl": "https://images.unsplash.com/photo-1532509774891-141d37f25ae9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvcmdhbmljJTIwZm9vZHxlbnwwfHx8fDE3NTkzOTk5NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "organic food"
+    },
+    {
+      "id": "service-1",
+      "description": "Professional consulting services for businesses.",
+      "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzU5NDM2MTM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business meeting"
+    },
+    {
+      "id": "service-2",
+      "description": "Creative design solutions for your brand.",
+      "imageUrl": "https://images.unsplash.com/photo-1656921350129-61ad3ff901f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkZXNpZ24lMjB0b29sc3xlbnwwfHx8fDE3NTk0MzMyNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "design tools"
+    },
+    {
+      "id": "service-3",
+      "description": "Expert software development and support.",
+      "imageUrl": "https://images.unsplash.com/photo-1658274474851-fda40d4c309d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb2RpbmclMjBzY3JlZW58ZW58MHx8fHwxNzU5MzgzMTk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coding screen"
+    },
+    {
+      "id": "video-thumbnail-1",
+      "description": "Thumbnail for a video showcasing the application.",
+      "imageUrl": "https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NTk0MzY4Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business dashboard"
+    },
+    {
+      "id": "avatar-1",
+      "description": "Avatar for a user named Alice.",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTkzOTY1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "avatar-2",
+      "description": "Avatar for a user named Bob.",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTkzNjQ5MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "avatar-3",
+      "description": "Avatar for a user named Carol.",
+      "imageUrl": "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc1OTQxNTUyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    }
+  ]
+}

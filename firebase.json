@@ -1,0 +1,85 @@
+{
+  "emulators": {
+    "singleProjectMode": true,
+    "auth": {
+      "port": 9099,
+      "host": "127.0.0.1"
+    },
+    "functions": {
+      "port": 5001,
+      "host": "127.0.0.1"
+    },
+    "firestore": {
+      "port": 8088,
+      "host": "127.0.0.1"
+    },
+    "hosting": {
+      "port": 5000,
+      "host": "127.0.0.1"
+    },
+    "storage": {
+      "port": 9199,
+      "host": "127.0.0.1"
+    },
+    "ui": {
+      "enabled": true,
+      "port": 4000,
+      "host": "127.0.0.1"
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint",
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ]
+    }
+  ],
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "firestore": {
+    "database": "(default)",
+    "location": "europe-west3",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "source": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "frameworksBackend": {
+      "region": "us-central1"
+    },
+    "headers": [
+      {
+        "source": "/**",
+        "headers": [
+          {
+            "key": "Content-Security-Policy",
+            "value": "upgrade-insecure-requests;"
+          }
+        ]
+      }
+    ]
+  },
+  "apphosting": {
+    "backendId": "commerceflow-backend",
+    "rootDir": "/",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      "functions"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user of the CommerceFlow application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the User entity."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "firstName": { "type": "string", "description": "User's first name." },
+        "lastName": { "type": "string", "description": "User's last name." },
+        "phoneNumber": {
+          "type": "string",
+          "description": "User's phone number."
+        },
+        "address": {
+          "type": "string",
+          "description": "User's primary address."
+        },
+        "role": {
+          "type": "string",
+          "description": "User's role, e.g., 'admin' or 'user'."
+        }
+      },
+      "required": ["id", "email", "firstName", "lastName", "role"]
+    }
+  },
+  "auth": {
+    "providers": ["password", "anonymous"],
+    "security_model": {
+      "description": "Role-based access control is implemented using Firebase Authentication Custom Claims. A custom backend function assigns a 'role' claim ('admin' or 'user') to each user. Firestore security rules inspect this claim on incoming requests to grant or deny access.",
+      "first_user_as_admin": true
+    }
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "description": "Stores user profiles. A user can write to their own document. An admin can read or write to any user document."
+      },
+      {
+        "path": "/products/{productId}",
+        "description": "Stores all available products. Publicly readable, but only writable by admins."
+      },
+      {
+        "path": "/users/{userId}/orders/{orderId}",
+        "description": "Stores user-specific orders. A user can read/write their own orders. An admin can only read user orders."
+      }
+    ],
+    "reasoning": "The Firestore structure is designed for security and scalability. User-owned data (like orders) is nested under that user's document, allowing for simple and effective path-based security rules. Global data (like products) is in a top-level collection. The security model relies on custom claims in the user's auth token, which is a modern, efficient, and secure method that avoids extra database reads to determine a user's role."
+  }
+}
