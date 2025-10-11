@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { Header } from "./components";
+import { CookieBanner } from "@/components/cookie-banner";
 
 export const metadata: Metadata = {
   title: "Next.js on Firebase App Hosting",
@@ -24,6 +25,7 @@ export default function RootLayout({
         <div className="dots" />
         <Header />
         {children}
+        <CookieBanner />
         <div className="bottom-gradient" />
       </body>
     </html>

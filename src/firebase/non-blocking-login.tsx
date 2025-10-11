@@ -6,12 +6,33 @@ import {
   signInAnonymously,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 import { errorEmitter } from "./error-emitter";
 
 interface AuthOptions {
   onSuccess?: (user: User) => void;
   onFinally?: () => void;
+}
+
+/** Initiate Google sign-in (non-blocking). */
+export function initiateGoogleSignIn(
+  authInstance: Auth,
+  options: AuthOptions = {},
+) {
+  const { onSuccess, onFinally } = options;
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(authInstance, provider)
+    .then((result) => {
+      onSuccess?.(result.user);
+    })
+    .catch((error) => {
+      errorEmitter.emit("auth-error", error);
+    })
+    .finally(() => {
+      onFinally?.();
+    });
 }
 
 /** Initiate anonymous sign-in (non-blocking). */
